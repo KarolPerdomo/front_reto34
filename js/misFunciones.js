@@ -59,7 +59,11 @@ function guardarInformacionCategorias(){
 ///////////////////Bikes//////////////////////////////////////
 function traerInformacionRoom(){
     $.ajax({
+<<<<<<< HEAD
         url:"http://129.151.114.19:8080/api/Room/all",
+=======
+        url:"http://129.151.114.19:8080/api/room/all",
+>>>>>>> d9b1e39c6dea84e77923d25f3b0cccf9cef85543
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -98,7 +102,11 @@ function guardarInformacionRoom(){
         dataType: 'JSON',
         data: JSON.stringify(var3),
         
+<<<<<<< HEAD
         url:"http://129.151.114.19:8080/api/Room/save",
+=======
+        url:"http://129.151.114.19:8080/api/room/save",
+>>>>>>> d9b1e39c6dea84e77923d25f3b0cccf9cef85543
        
         
         success:function(response) {
