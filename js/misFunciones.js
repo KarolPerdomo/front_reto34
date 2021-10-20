@@ -1,6 +1,6 @@
 function traerInformacionCategorias(){
     $.ajax({
-        url:"http://10.0.0.133:8080/api/Category/all",
+        url:"http://129.151.114.19:8080/api/Category/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -35,7 +35,7 @@ function guardarInformacionCategorias(){
         dataType: 'JSON',
         data: JSON.stringify(var2),
         
-        url:"http://10.0.0.133:8080/api/Category/save",
+        url:"http://129.151.114.19:8080/api/Category/save",
        
         
         success:function(response) {
@@ -57,9 +57,9 @@ function guardarInformacionCategorias(){
 }
 
 ///////////////////Bikes//////////////////////////////////////
-function traerInformacionBikes(){
+function traerInformacionRoom(){
     $.ajax({
-        url:"http://10.0.0.133:8080/api/Bike/all",
+        url:"http://129.151.114.19:8080/api/room/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -69,7 +69,7 @@ function traerInformacionBikes(){
     });
 }
 
-function pintarRespuestaBikes(respuesta){
+function pintarRespuestaRoom(respuesta){
 
     let myTable="<table>";
     for(i=0;i<respuesta.length;i++){
@@ -84,7 +84,7 @@ function pintarRespuestaBikes(respuesta){
     $("#resultado2").html(myTable);
 }
 
-function guardarInformacionBikes(){
+function guardarInformacionRoom(){
     let var3 = {
         name:$("#Bname").val(),
         brand:$("#Bbrand").val(),
@@ -98,7 +98,7 @@ function guardarInformacionBikes(){
         dataType: 'JSON',
         data: JSON.stringify(var3),
         
-        url:"http://10.0.0.133:8080/api/Bike/save",
+        url:"http://129.151.114.19:8080/api/room/save",
        
         
         success:function(response) {
@@ -121,7 +121,7 @@ function guardarInformacionBikes(){
 //////////////////////Clientes//////////////////////////////////
 function traerInformacionClientes(){
     $.ajax({
-        url:"http://10.0.0.133:8080/api/Client/all",
+        url:"http://129.151.114.19:8080/api/Client/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){
@@ -160,7 +160,7 @@ function guardarInformacionClientes(){
         dataType: 'JSON',
         data: JSON.stringify(var4),
         
-        url:"http://10.0.0.133:8080/api/Client/save",
+        url:"http://129.151.114.19:8080/api/Client/save",
        
         
         success:function(response) {
