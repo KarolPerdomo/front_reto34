@@ -1,6 +1,6 @@
 function getDatosCategoria(){
     $.ajax({
-        url:"http://localhost:8080/api/Category/all",
+        url:"http://129.151.124.210:8080/api/Category/all",
         type:"GET",
         datatype:"JSON",
         success:function(respuesta){

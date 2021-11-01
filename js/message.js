@@ -2,7 +2,7 @@
 
 function getDatosMessage() {
     $.ajax({
-        url: "http://localhost:8080/api/Message/all",
+        url: "http://129.151.124.210:8080/api/Message/all",
         type: "GET", //tipo de accion
         datatype: "JSON",
         success: function (respuesta) {
@@ -38,7 +38,7 @@ function guardarMessage() {
         dataType: 'JSON',
         data: JSON.stringify(myData),
         
-        url:"http://localhost:8080/api/Message/save",
+        url:"http://129.151.124.210:8080/api/Message/save",
     
         
         success:function(response) {
@@ -67,7 +67,7 @@ function editarMessage() {
     console.log(myData);
     let dataToSend = JSON.stringify(myData);
     $.ajax({
-        url: "http://localhost:8080/api/Message/update",
+        url: "http://129.151.124.210:8080/api/Message/update",
         type: "PUT",
         data: dataToSend,
         contentType: "application/JSON",
@@ -91,7 +91,7 @@ function borrarMessage(idElemento) {
     };
     let dataToSend = JSON.stringify(myData);
     $.ajax({
-        url: "http://localhost:8080/api/Message/"+idElemento,
+        url: "http://129.151.124.210:8080/api/Message/"+idElemento,
         type: "DELETE",
         data: dataToSend,
         contentType: "application/JSON",
@@ -108,7 +108,7 @@ function obtenerItemEspecificoMessage(items) {
     console.log("---- obtenerItemEspecificoMessage items:", items);
     $.ajax({
         dataType: "json",
-        url: "http://localhost:8080/api/Message/Message/" + items,
+        url: "http://129.151.124.210:8080/api/Message/Message/" + items,
         type: "GET",
         success: function (response) {
         console.log("---- obtenerItemEspecificoMessage", response);
